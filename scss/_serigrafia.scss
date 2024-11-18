@@ -6,7 +6,8 @@ body {
 
         .titulos__tamaño {
             @include sizes (400px,400px);
-            margin-bottom: 15%;
+            margin-bottom: 7%;
+            margin-top: 7%;
         }
         
         .textos {

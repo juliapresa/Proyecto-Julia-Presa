@@ -14,18 +14,23 @@ body {
 }
 body .mainInicio {
   background-color: white;
+  margin-bottom: 10%;
 }
 body .mainInicio .titulos__tamaño {
   width: 400px;
   height: 400px;
-  margin-bottom: 15%;
+  margin-bottom: 7%;
+  margin-top: 7%;
 }
 body .mainInicio .carrusel {
-  margin-bottom: 15%;
+  margin-bottom: 10%;
   height: 80vh;
 }
 body .mainInicio .carrusel .carruselImg {
-  height: 80vh;
+  height: 90vh;
+}
+body .mainInicio .carrusel .imgCarousel {
+  object-fit: fill;
 }
 body .mainInicio .contenedorSobremi {
   display: flex;
@@ -34,7 +39,7 @@ body .mainInicio .contenedorSobremi {
   text-align: center;
   width: 100%;
   height: fit-content;
-  margin-bottom: 15%;
+  margin-bottom: 10%;
 }
 body .mainInicio .contenedorSobremi .contenedorSobremi__parrafo {
   font-family: "Source Serif Pro", serif;
@@ -42,7 +47,7 @@ body .mainInicio .contenedorSobremi .contenedorSobremi__parrafo {
   width: 50%;
   height: 50vh;
   align-content: center;
-  margin-top: 2%;
+  margin: 0;
 }
 body .mainInicio .contenedorSobremi .titulos {
   font-family: "Castoro Titling", cursive;
@@ -68,16 +73,25 @@ body .mainInicio .cards .card .cardBody {
 body .mainInicio .cards .card .cardBody:hover {
   color: violet;
 }
-body .mainInicio .contenedorGaleriaInicio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+body .mainInicio .gallery {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
 }
-body .mainInicio .contenedorGaleriaInicio .imgInicio {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  margin-top: 10px;
+body .mainInicio .gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+body .mainInicio .gallery .gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body .mainInicio .gallery .gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
@@ -140,23 +154,34 @@ body {
   font-family: "Source Serif Pro", serif;
   background-color: white;
 }
+body .mainIlustracion {
+  margin-bottom: 10%;
+}
 body .mainIlustracion .titulos__tamaño {
   width: 400px;
   height: 400px;
-  margin-bottom: 15%;
+  margin-bottom: 7%;
+  margin-top: 7%;
 }
-body .mainIlustracion .contenedorGaleria, body .mainIlustracion .mainTatuajes .contenedorGaleriados, body .mainTatuajes .mainIlustracion .contenedorGaleriados {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+body .mainIlustracion .gallery {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
 }
-body .mainIlustracion .contenedorGaleria .ImgIlu, body .mainIlustracion .mainTatuajes .contenedorGaleriados .ImgIlu, body .mainTatuajes .mainIlustracion .contenedorGaleriados .ImgIlu {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border: 1px black solid;
-  margin-top: 10px;
-  border-radius: 20px;
+body .mainIlustracion .gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+body .mainIlustracion .gallery .gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body .mainIlustracion .gallery .gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
@@ -200,7 +225,8 @@ body .mainSerigrafia {
 body .mainSerigrafia .titulos__tamaño {
   width: 400px;
   height: 400px;
-  margin-bottom: 15%;
+  margin-bottom: 7%;
+  margin-top: 7%;
 }
 body .mainSerigrafia .textos {
   margin-bottom: 15%;
@@ -298,7 +324,8 @@ body {
 body .mainTatuajes .titulos__tamaño {
   width: 400px;
   height: 400px;
-  margin-bottom: 15%;
+  margin-bottom: 7%;
+  margin-top: 7%;
 }
 body .mainTatuajes .titulotatu {
   display: flex;
@@ -316,77 +343,25 @@ body .mainTatuajes .contenedorGaleria, body .mainTatuajes .contenedorGaleriados 
   margin-bottom: 15%;
 }
 body .mainTatuajes .contenedorGaleria .ImgTatu, body .mainTatuajes .contenedorGaleriados .ImgTatu {
-  width: 400px;
-  height: 400px;
-  margin-top: 5%;
+  width: 30%;
+  height: fit-content;
+  margin-top: 2%;
   border: 1px black solid;
   border-radius: 20px;
 }
-body .mainTatuajes .cardCuidados {
-  margin-bottom: 2%;
-}
-body .mainTatuajes .cardCuidados .cardCuidados__parrafo, body .mainTatuajes .cardCuidados .nohacer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 70%;
+body .mainTatuajes .contenedorGaleria .ImgTatuUno, body .mainTatuajes .contenedorGaleriados .ImgTatuUno {
+  width: 30%;
   height: fit-content;
-  text-align: center;
-}
-body .mainTatuajes .cardCuidados .cardCuidados__parrafo .titulo, body .mainTatuajes .cardCuidados .nohacer .titulo {
-  font-family: "Castoro Titling", cursive;
-}
-body .mainTatuajes .cardCuidados .cardCuidados__parrafo .parrafo, body .mainTatuajes .cardCuidados .nohacer .parrafo {
-  font-family: "Source Serif Pro", serif;
-  font-size: xx-large;
-}
-body .mainTatuajes .listaItemolDos {
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin-bottom: 15%;
-}
-body .mainTatuajes .listaItemolDos .listaItemliDos {
-  font-family: "Source Serif Pro", serif;
-  font-size: x-large;
-  margin-top: 2%;
-  margin-bottom: 2%;
-}
-body .mainTatuajes .nohacerTitulo {
-  display: flex;
-  justify-content: center;
-  font-family: "Castoro Titling", cursive;
-}
-body .mainTatuajes .nohacer {
-  width: 100%;
-  margin-bottom: 15%;
-}
-body .mainTatuajes .nohacer .listaItem {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-evenly;
-  font-size: x-large;
+  margin-top: 0%;
+  border: 1px black solid;
+  border-radius: 20px;
 }
 body .mainTatuajes .contenedorGaleriados .imgTatudos {
-  width: 300px;
-  height: 300px;
+  width: 30%;
+  height: auto;
   border: 1px black solid;
   border-radius: 20px;
   margin-top: 5%;
-}
-body .mainTatuajes .boxVideo {
-  text-align: center;
-}
-body .mainTatuajes .boxVideo .videoParrafo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
-  height: fit-content;
-  text-align: center;
-  font-family: "Castoro Titling", cursive;
-  font-size: x-large;
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
@@ -417,48 +392,12 @@ body .mainTatuajes .boxVideo .videoParrafo {
     border: 1px black solid;
     border-radius: 20px;
   }
-  body .mainTatuajes .cardCuidados {
-    width: 95%;
-    margin-bottom: 2%;
-  }
-  body .mainTatuajes .cardCuidados .cardCuidados__parrafo, body .mainTatuajes .cardCuidados .nohacer {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  body .mainTatuajes .cardCuidados .cardCuidados__parrafo .titulo, body .mainTatuajes .cardCuidados .nohacer .titulo {
-    font-family: "Castoro Titling", cursive;
-  }
-  body .mainTatuajes .cardCuidados .cardCuidados__parrafo .parrafo, body .mainTatuajes .cardCuidados .nohacer .parrafo {
-    font-family: "Source Serif Pro", serif;
-    font-size: x-large;
-  }
-  body .mainTatuajes .sectionNohacer {
-    width: 99%;
-    padding: 0%;
-    margin: 0%;
-    margin-top: 30%;
-    margin-bottom: 30%;
-  }
-  body .mainTatuajes .sectionNohacer .nohacerTitulo {
-    margin: 0%;
-    font-family: "Castoro Titling", cursive;
-  }
-  body .mainTatuajes .listaItemolDos {
-    padding: 0%;
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    align-items: center;
-  }
-  body .mainTatuajes .listaItemolDos .listaItemliDos {
-    align-items: center;
-    font-family: "Source Serif Pro", serif;
-    font-size: x-large;
-    margin-top: 2%;
-    margin-bottom: 2%;
+  body .mainTatuajes .contenedorGaleria .ImgTatuUno, body .mainTatuajes .contenedorGaleriados .ImgTatuUno {
+    width: 250px;
+    height: 250px;
+    margin-top: 5%;
+    border: 1px black solid;
+    border-radius: 20px;
   }
   body .mainTatuajes .contenedorGaleriados {
     display: flex;
@@ -472,31 +411,20 @@ body .mainTatuajes .boxVideo .videoParrafo {
     border-radius: 20px;
     margin-top: 5%;
   }
-  body .mainTatuajes .boxVideo {
-    text-align: center;
-    margin-top: 5%;
-  }
-  body .mainTatuajes .boxVideo .videoParrafo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    height: fit-content;
-    text-align: center;
-    font-family: "Castoro Titling", cursive;
-    font-size: x-large;
-    margin-top: 15%;
-  }
 }
 body {
   font-family: "Castoro Titling", cursive;
   font-family: "Source Serif Pro", serif;
   background-color: white;
 }
+body .mainContacto {
+  margin-bottom: 5%;
+}
 body .mainContacto .titulos__tamaño {
   width: 400px;
   height: 400px;
-  margin-bottom: 15%;
+  margin-bottom: 7%;
+  margin-top: 7%;
 }
 body .mainContacto .contenedorCentrar .titulo {
   font-family: "Castoro Titling", cursive;
@@ -516,16 +444,9 @@ body .mainContacto .divContacto .formulario .button {
   color: black;
   font-family: "Castoro Titling", cursive;
 }
-body .mainContacto .divContacto .boxMap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 5%;
-}
-body .mainContacto .divContacto .boxMap .mapa {
-  width: 80%;
-  height: 40vh;
-  border: 0;
+body .mainContacto .divContacto .formulario .button:hover {
+  background-color: rgba(0, 0, 0, 0.786);
+  color: white;
 }
 
 @media screen and (min-width: 0px) and (max-width: 768px) {
@@ -667,7 +588,7 @@ header .contenedorLogo {
 }
 header .contenedorLogo .imgLogo {
   width: 140px;
-  height: 60px;
+  height: auto;
 }
 header .contenedorNav {
   height: fit-content;
@@ -675,25 +596,46 @@ header .contenedorNav {
 
 footer {
   font-family: "Castoro Titling", cursive;
+  color: #000000;
+  padding: 20px;
 }
-footer .contenedorLogo {
-  margin-top: 1%;
-  height: fit-content;
+footer .footer-map, footer .footer-contact, footer .footer-social {
+  margin: 10px;
+  flex: 1 1 300px; /* Flexibles para que se adapten al espacio */
 }
-footer .contenedorLogo .imgLogo {
-  width: 140px;
-  height: 60px;
+footer .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-footer .boxIcon__uno {
+footer .footer-container .footer-map iframe {
+  width: 100%;
+  height: 100%;
+}
+footer .footer-container .footer-contact {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+}
+footer .footer-social {
+  height: 3rem;
+}
+footer .footer-social .boxIcon__uno {
   font-size: 3rem;
 }
-footer .boxIcon__uno .icon {
-  color: #766e6e;
+footer .footer-social .boxIcon__uno .icon {
+  font-size: 2rem;
 }
-footer .boxIcon__uno .iconMid {
-  color: #766e6e;
+footer .footer-social .boxIcon__uno .iconMid {
+  font-size: 2rem;
   margin-left: 2%;
   margin-right: 2%;
+}
+footer .footer-social .boxIcon__uno .icon:hover {
+  font-size: 2.2rem;
+}
+footer .footer-social .boxIcon__uno .iconMid:hover {
+  font-size: 2.2rem;
 }
 footer .boxIcon__dos {
   display: inline-block;
@@ -706,6 +648,15 @@ footer .boxIcon__dos .iconDos {
   font-size: 3rem;
   color: #367240;
   display: inline-block;
+}
+footer .footer-logo {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-logo img {
+  margin: 10px;
+  width: 110px;
+  height: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

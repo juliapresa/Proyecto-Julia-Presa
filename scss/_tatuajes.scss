@@ -5,7 +5,8 @@ body {
     .mainTatuajes {
         .titulos__tamaño {
             @include sizes (400px, 400px);
-            margin-bottom: 15%;
+            margin-bottom: 7%;
+            margin-top: 7%;
         }
         .titulotatu {
             display: map-get($map: $flexelements, $key: flex);
@@ -22,84 +23,25 @@ body {
             justify-content: map-get($map: $flexelements, $key: space-evenly);
             margin-bottom: 15%;
             .ImgTatu {
-                @include sizes (400px, 400px);
-                margin-top: 5%;
+                @include sizes (30%, fit-content);
+                margin-top: 2%;
                 border: 1px black solid;
                 border-radius: 20px;
             }
-        }
-
-        .cardCuidados {
-            margin-bottom: 2%;
-
-            .cardCuidados__parrafo {
-                display: map-get($map: $flexelements, $key: flex);
-                flex-direction: map-get($map: $flexelements, $key: column);
-                align-items: center;
-                @include sizes (70%, fit-content);
-                text-align: center;
-                .titulo{
-                    font-family: $fonttitulo;
-                }
-                .parrafo{
-                    font-family: $fonttextos;
-                    font-size: xx-large;
-                }
+            .ImgTatuUno{
+                @include sizes (30%, fit-content);
+                margin-top: 0%;
+                border: 1px black solid;
+                border-radius: 20px; 
             }
         }
-        
-        .listaItemolDos {
-            display: map-get($map: $flexelements, $key: flex);
-            flex-direction: map-get($map: $flexelements, $key: column);
-            width: 90%;
-            margin-bottom: 15%;
-            .listaItemliDos{
-                font-family: $fonttextos;
-                font-size: x-large;
-                margin-top: 2%;
-            margin-bottom: 2%;
-            }
-        }
-
-        .nohacerTitulo {
-            display: map-get($map: $flexelements, $key: flex);
-            justify-content: center;
-            font-family: $fonttitulo;
-        }
-
-        .nohacer {
-            @extend .cardCuidados__parrafo;
-            width: 100%;
-            margin-bottom: 15%;
-            .listaItem {
-                display: map-get($map: $flexelements, $key: flex);
-                flex-direction: map-get($map: $flexelements, $key: row);
-                width: 100%;
-                justify-content: map-get($map: $flexelements, $key: space-evenly);
-                font-size: x-large;
-            }
-        }
-
         .contenedorGaleriados {
             @extend .contenedorGaleria;
             .imgTatudos {
-                @include sizes (300px, 300px);
+                @include sizes (30%, auto);
                 border: 1px black solid;
                 border-radius: 20px;
                 margin-top: 5%;
-            }
-        }
-
-        .boxVideo {
-            text-align: center;
-            .videoParrafo {
-                display: map-get($map: $flexelements, $key: flex);
-                flex-direction: map-get($map: $flexelements, $key: column);
-                align-items: center;
-                @include sizes (50%, fit-content);
-                text-align: center;
-                font-family: $fonttitulo;
-                font-size: x-large;
             }
         }
     }
@@ -129,54 +71,14 @@ body {
                     border: 1px black solid;
                     border-radius: 20px;
                 }
-            }
-    
-            .cardCuidados {
-                width: 95%;
-                margin-bottom: 2%;
-    
-                .cardCuidados__parrafo {
-                    width: 95%;
-                    display: map-get($map: $flexelements, $key: flex);
-                    flex-direction: map-get($map: $flexelements, $key: column);
-                    align-items: center;
-                    text-align: center;
-                    .titulo{
-                        font-family: $fonttitulo;
-                    }
-                    .parrafo{
-                        font-family: $fonttextos;
-                        font-size: x-large;
-                    }
+                .ImgTatuUno {
+                    @include sizes (250px, 250px);
+                    margin-top: 5%;
+                    border: 1px black solid;
+                    border-radius: 20px;
                 }
             }
-            .sectionNohacer{
-                width: 99%;
-                padding: 0%;
-                margin: 0%;
-                margin-top: 30%;
-                margin-bottom: 30%;
-                    .nohacerTitulo{
-                        margin: 0%;
-                        font-family: $fonttitulo;
-                    }
 
-            }
-            .listaItemolDos {
-                padding: 0%;
-                display: map-get($map: $flexelements, $key: flex);
-                flex-direction: map-get($map: $flexelements, $key: column);
-                width: 95%;
-                align-items: center;
-                .listaItemliDos{
-                    align-items: center;
-                    font-family: $fonttextos;
-                    font-size: x-large;
-                    margin-top: 2%;
-                    margin-bottom: 2%;
-                }
-            }
-            
             .contenedorGaleriados {
                 display: map-get($map: $flexelements, $key: flex);
                 flex-wrap: wrap;
@@ -187,21 +89,6 @@ body {
                     border: 1px black solid;
                     border-radius: 20px;
                     margin-top: 5%;
-                }
-            }
-    
-            .boxVideo {
-                text-align: center;
-                margin-top: 5%;
-                .videoParrafo {
-                    display: map-get($map: $flexelements, $key: flex);
-                    flex-direction: map-get($map: $flexelements, $key: column);
-                    align-items: center;
-                    @include sizes (95%, fit-content);
-                    text-align: center;
-                    font-family: $fonttitulo;
-                    font-size: x-large;
-                    margin-top: 15%;
                 }
             }
         }

@@ -3,23 +3,34 @@ body {
     font-family: 'Source Serif Pro', serif;
     background-color: $backgroundcolor;
     .mainIlustracion {
+        margin-bottom: 10%;
         .titulos__tamaño {
             @include sizes (400px,400px);
-            margin-bottom: 15%;
+            margin-bottom: 7%;
+            margin-top: 7%;
         }
-        .contenedorGaleria {
-            display: map-get($map: $flexelements, $key: flex);
-            flex-wrap: wrap;
-            justify-content: map-get($map: $flexelements, $key: space-evenly);
-
-            .ImgIlu {
-                @include sizes (400px,400px);
-                object-fit: cover;
-                border: 1px black solid;
-                margin-top: 10px;
-                border-radius: 20px;
-            }
-        }
+        .gallery {  
+            width: 90%;  
+            max-width: 1200px;  
+            margin: 20px auto;  
+            text-align: center;  
+            .gallery-grid {  
+                display: grid;  
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
+                gap: 15px;  
+            }  
+            
+            .gallery-grid img {  
+                width: 100%;  
+                border-radius: 8px;  
+                transition: transform 0.3s ease, box-shadow 0.3s ease;  
+            }  
+            
+            .gallery-grid img:hover {  
+                transform: scale(1.05);  
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  
+            }  
+        } 
     }
 }
 @media screen and (min-width: 0px) and (max-width: 768px){

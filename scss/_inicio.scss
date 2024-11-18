@@ -5,17 +5,21 @@ body {
     font-family: 'Source Serif Pro', serif;
     .mainInicio {
         background-color: $backgroundcolor;
-
+        margin-bottom: 10%;
         .titulos__tamaño {
             @include sizes (400px,400px);
-            margin-bottom: 15%;
+            margin-bottom: 7%;
+            margin-top: 7%;
         }
 
         .carrusel{
-            margin-bottom: 15%;
+            margin-bottom: 10%;
             height: 80vh;
             .carruselImg{
-                height: 80vh;
+                height: 90vh;
+            }
+            .imgCarousel{
+                object-fit: fill;
             }
         }
 
@@ -25,14 +29,13 @@ body {
             align-items: center;
             text-align: center;
             @include sizes (100%,fit-content);
-            margin-bottom: 15%;
-
+            margin-bottom: 10%;
             .contenedorSobremi__parrafo {
                 font-family:  $fonttextos;
                 font-size: xx-large;
                 @include sizes (50%,50vh);
                 align-content: center;
-                margin-top: 2%;
+                margin: 0;
             }
             .titulos{
                 font-family: $fonttitulo;
@@ -60,18 +63,28 @@ body {
                 
             }
         }
-
-        .contenedorGaleriaInicio {
-            display: map-get($map: $flexelements, $key: flex);
-            flex-wrap: wrap;
-            justify-content: center;
-
-            .imgInicio {
-                @include sizes (300px,300px);
-                object-fit: cover;
-                margin-top: 10px;
-            }
-        }
+        .gallery {  
+            width: 90%;  
+            max-width: 1200px;  
+            margin: 20px auto;  
+            text-align: center;  
+            .gallery-grid {  
+                display: grid;  
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  
+                gap: 15px;  
+            }  
+            
+            .gallery-grid img {  
+                width: 100%;  
+                border-radius: 8px;  
+                transition: transform 0.3s ease, box-shadow 0.3s ease;  
+            }  
+            
+            .gallery-grid img:hover {  
+                transform: scale(1.05);  
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);  
+            }  
+        } 
 
     }
 }
